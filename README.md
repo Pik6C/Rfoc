@@ -39,6 +39,6 @@ Usage: `vira <file> -n`
 Creates a new file.
 <br>
 ### -sz or --size
-Usage: vira <file> -sz
+Usage: `vira <file> -sz`
 <br>
 Displays the size of the specified file.
