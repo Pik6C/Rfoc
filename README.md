@@ -46,8 +46,8 @@ Displays the size of the specified file.
 ## Applying the vira Command
 ### For Linux
 Only available for Debian-based systems.<br>
-Please use with caution when using the sudo command.<br>
-Execute the following command:<br>
+Note that the sudo command is used.<br>
+Execute the following command<br>
 `sudo dpkg -i vira.deb`
 ### For Windows
 
