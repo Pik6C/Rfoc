@@ -2,7 +2,7 @@
 
 ## Usage
 <br>
-`vira <option> <file>`
+`vira [option] [file]`
 
 ## Options
 <br>
