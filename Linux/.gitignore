@@ -10,4 +10,5 @@ target/
 # Contains an executable file
 vira/
 
-test/
+# vira deb file.
+vira.deb
