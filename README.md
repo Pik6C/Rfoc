@@ -59,7 +59,7 @@ Execute the following command:<br>
 3. Click on "Edit the environment variables".
    - The Environment Variables window will appear.
 <br>
-Under User variables, click on **Path** and then click **Edit**.
+Under User variables, click on *Path* and then click *Edit*.
 The Edit Environment Variable window will appear.<br>
 Click on New, enter the path where the vira command is located, and click OK.<br>
 Return to the Environment Variables window.<br>
