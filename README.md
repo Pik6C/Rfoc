@@ -5,8 +5,6 @@
 `vira <file> <option>`
 
 ## Options
-<br>
-
 ### -w or --write
 Usage: `vira <file> --write <option> <text>`
 <br>
@@ -25,18 +23,22 @@ Writes the specified string to a file. By setting options, you can choose whethe
 
 ### -s or --stdin
   Usage: `vira <file> -s`
+  <br>
 Writes the contents received from standard input into the file sequentially. The content cannot be deleted.
 <br>
 
 ### -r or --remove
 Usage: `vira <file> -r`
+<br>
 Removes the specified file.
 <br>
 
 ### -n or --new
 Usage: `vira <file> -n`
+<br>
 Creates a new file.
 <br>
 ### -sz or --size
 Usage: vira <file> -sz
+<br>
 Displays the size of the specified file.
