@@ -1,7 +1,6 @@
 # Visual File Read System - Vira
 
 ## Usage
-<br>
 
 `vira <file> <option>`
 
