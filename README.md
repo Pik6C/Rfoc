@@ -42,3 +42,36 @@ Creates a new file.
 Usage: `vira <file> -sz`
 <br>
 Displays the size of the specified file.
+
+### Applying the vira Command
+<br>
+#### For Linux
+Only available for Debian-based systems.<br>
+Please use with caution when using the sudo command.<br>
+Execute the following command:<br>
+`sudo dpkg -i vira.deb`
+#### For Windows
+
+##### For Windows 10
+1. Open Start and click on Settings.
+   - The Windows Settings window will appear.
+2. Type "environment variables" in the search bar.
+   - "Edit the system environment variables" will appear as an option.
+3. Click on "Edit the environment variables".
+   - The Environment Variables window will appear.
+<br>
+Under User variables, click on <br>**Path** and then click **Edit**.
+The Edit Environment Variable window will appear.<br>
+Click on New, enter the path where the vira command is located, and click OK.<br>
+Return to the Environment Variables window.<br>
+<br>
+##### For Windows 11
+1. Press Windows key + Pause.
+   - Open the System - About screen of the Settings app.
+2. Click on the link for System info settings.
+   - Open the System Properties window.
+3. Click on the Environment Variables button at the bottom right of the Advanced tab.
+   - Open the Environment Variables window.
+
+Click New, enter the path where the vira command is located, and click OK.<br>
+Return to the Environment Variables window.<br>
