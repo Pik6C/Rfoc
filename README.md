@@ -44,7 +44,6 @@ Usage: `vira <file> -sz`
 Displays the size of the specified file.
 
 ### Applying the vira Command
-<br>
 #### For Linux
 Only available for Debian-based systems.<br>
 Please use with caution when using the sudo command.<br>
