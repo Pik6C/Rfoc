@@ -1,9 +1,0 @@
-Package: vira
-Version: 0.1.1
-Section: base
-Priority: optional
-Architecture: amd64
-Depends: 
-Maintainer: Pik6C <pik6cs@gmail.com>
-Description: Visual Read/Write command.
-	     Made by Rust.
