@@ -1,20 +1,35 @@
-# Vira
-A simple file read/write command
-<br>
-Basic usage:
-`vira <file> <option>`
-If you run vira without specifying anything, it will take input from standard input, just like cat.
-<br>
+# Visual File Read System - Vira
 
-Option types:
-`-s`:
-Takes text from standard input and writes it to a file.
-`-r`:
-Deletes the file.
+## Usage
+<br>
+`vira <option> <file>`
 
+## Options
 <br>
-`--write` or `-w`:
-Writes the following text to the file. There are several options for this:
+### -w or --write
+Usage: `vira <file> --write <option> <text>`
+Writes the specified string to a file. By setting options, you can choose whether to overwrite or append to the file.
 <br>
-==write options==
-`-r`:Rewrites the contents of the file (existing contents will be lost). If the file does not exist, it will create a new file.
+#### Write Options
+- **-r:**  
+  Overwrites the contents of the file (existing contents will be lost). If the file does not exist, a new file will be created.
+- **-c:**  
+  Appends the contents to the file as is.
+<br>
+**End of write options.**
+<br>
+### -s or --stdin
+  Usage: `vira <file> -s`
+Writes the contents received from standard input into the file sequentially. The content cannot be deleted.
+<br>
+### -r or --remove
+Usage: `vira <file> -r`
+Removes the specified file.
+<br>
+### -n or --new
+Usage: `vira <file> -n`
+Creates a new file.
+<br>
+### -sz or --size
+Usage: vira <file> -sz
+Displays the size of the specified file.
