@@ -9,3 +9,5 @@ target/
 # The vira directory is used to generate deb files.
 # Contains an executable file
 vira/
+
+test/
