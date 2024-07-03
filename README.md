@@ -2,13 +2,15 @@
 
 ## Usage
 <br>
-`vira [option] [file]`
+
+`vira <file> <option>`
 
 ## Options
 <br>
 
 ### -w or --write
 Usage: `vira <file> --write <option> <text>`
+<br>
 Writes the specified string to a file. By setting options, you can choose whether to overwrite or append to the file.
 <br>
 
