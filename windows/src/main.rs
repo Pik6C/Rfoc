@@ -10,7 +10,7 @@ fn main(){
         loop{
             let mut str = String::new();
             io::stdin().read_line(&mut str).unwrap();
-	　  print!("{}",str);
+            print!("{}",str);
             io::stdout().flush().unwrap();
         }
     }
