@@ -12,7 +12,6 @@ fn main(){
         loop{
             let mut str = String::new();
             io::stdin().read_line(&mut str).unwrap();
-            let str:&str = str.trim();
             print!("{}",str);
             io::stdout().flush().unwrap();
         }
