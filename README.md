@@ -43,6 +43,9 @@ Usage: `vira <file> -sz`
 <br>
 Displays the size of the specified file.
 
+### -b or --backup 
+Create a backup of your files.
+
 ## Applying the vira Command
 ### For Linux
 Only available for Debian-based systems.<br>
@@ -52,6 +55,10 @@ Execute the following command<br>
 ### For Windows
 
 #### For Windows 10
+> [!WARNING]
+> Please note that Windows version will not be released from v0.1.2
+
+
 1. Open Start and click on Settings.
    - The Windows Settings window will appear.
 2. Type "environment variables" in the search bar.
