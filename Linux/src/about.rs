@@ -9,6 +9,8 @@ pub fn help() {
     println!("{}", "Usage: vira <file> <option>".green());
     println!("{}", "options:".yellow());
     println!("");
+    println!("{} or {}", "-v".purple(), "--version".purple());
+    println!("  Display the vira version");
     println!("{} or {}", "--write".purple(), "-w:".purple());
     println!("       Usage: vira <file> --write <option> <text>");
     println!("       writes the following string to a file");

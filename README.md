@@ -49,7 +49,6 @@ Create a backup of your files.
 ## Applying the vira Command
 ### For Linux
 Only available for Debian-based systems.<br>
-You can use it on any Linux by installing dpkg<br>
 Note that the sudo command is used.<br>
 Execute the following command<br>
 `sudo dpkg -i vira.deb`

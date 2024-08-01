@@ -29,7 +29,8 @@ fn main() {
             "visual read/write command".cyan(),
             "vira".cyan().bold()
         );
-        println!("alpha release v0.1.2");
+        println!("alpha release v0.1.2.1");
+        return;
     }
     // --writeオプションです
     if args.len() > 3 {
@@ -155,7 +156,7 @@ fn main() {
                     Err(err) => eprintln!("Error: {}", err),
                 }
             }
-            Err(e) => println!("{}", e),
+            Err(e) => println!("Error: {}", e),
         }
     }
     //普通のviraの処理。ほぼcatと同じ動きする。違いといえば最後に改行するぐらい
