@@ -58,6 +58,8 @@ Execute the following command<br>
 > [!WARNING]
 > Please note that Windows version will not be released from v0.1.2
 
+> [!WARNING]
+> Unlike the Linux version, the fonts are not colored in the Windows version.
 
 1. Open Start and click on Settings.
    - The Windows Settings window will appear.
