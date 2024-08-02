@@ -18,7 +18,6 @@ Writes the specified string to a file. By setting options, you can choose whethe
   Appends the contents to the file as is.
 <br>
 
-**End of write options.**
 <br>
 
 ### -s or --serch
