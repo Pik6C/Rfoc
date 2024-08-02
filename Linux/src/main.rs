@@ -29,7 +29,7 @@ fn main() {
             "visual read/write command".cyan(),
             "vira".cyan().bold()
         );
-        println!("alpha release v0.1.2.1");
+        println!("alpha release v0.1.3");
         return;
     }
     // --writeオプションです
@@ -52,7 +52,7 @@ fn main() {
                 .expect("Error: failed to write file");
             println!("Successfully wrote to the file.");
         }
-    } else if args.len() == 3 && args[2] == "-c" || args.len() == 3 && args[2] == "--continue" {
+    } else if args.len() == 3 && args[2] == "-cw" || args.len() == 3 && args[2] == "--continuew" {
         let path = &args[1];
         match OpenOptions::new().read(true).append(true).open(path) {
             Ok(mut file) => {

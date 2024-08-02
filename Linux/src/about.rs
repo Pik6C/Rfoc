@@ -22,8 +22,10 @@ pub fn help() {
     println!("      {}", "-c".cyan());
     println!("          Continue writing the contents of the file as is.\n");
     println!("      {}", "~~~end of Write Oprions~~~".yellow());
-    println!("  {} or {}", "-s".purple(), "--stdin:".purple());
-    println!("      Writes the contents received from standard input into the file one by one. Cannot be deleted.");
+    println!("  {} or {}", "-s".purple(), "--serch:".purple());
+    println!("      Checks if a file contains a specific string.");
+    println!("      If so, print the number and line where that character is found.");
+    println!("          Usage: vira <file> -s <serch string>");
     println!("  {} or {}", "-r".purple(), "--remove:".purple());
     println!("      remove to this file.\n      Usage: vira <remove file> -r");
     println!("  {} or {}", "-n".purple(), "--new:".purple());
@@ -32,4 +34,7 @@ pub fn help() {
     println!("      Display this file size.     Usage: vira <file> -sz");
     println!("  {} or {}", "-b".purple(), "--backup".purple());
     println!("      Create a backup of that file.   Usage: vira <file> -b");
+    println!("  {} or {}", "-cw".purple(), "--continuew".purple());
+    println!("      Receives characters from standard input and writes the characters successively down the file.");
+    println!("      Usage: vira <file> -cw");
 }
