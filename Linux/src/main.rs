@@ -3,7 +3,7 @@ use colored::*;
 use std::env;
 use std::fs;
 use std::fs::{remove_file, File, OpenOptions};
-use std::io::{self, stdout, BufReader, Read, Write};
+use std::io::{self, stdout, BufRead, BufReader, Read, Write};
 use std::path::Path;
 mod about;
 mod write;
@@ -33,33 +33,26 @@ fn main() {
         return;
     }
     // --writeオプションです
-    if args.len() > 3 {
-        if args.len() > 4 {
-            if args[2] == "--write" || args[2] == "-w" {
-                // --writeオプションの-rオプションです
-                if args[3] == "-r" && args.len() == 5 {
-                    let path = Path::new(args[1].as_str());
-                    if path.exists() {
-                        write::exists(path, args.clone())
-                    } else {
-                        write::filenotfound(path, args.clone());
-                    }
-                } else if args[3] == "-c" && args.len() == 5 {
-                    write::wrcontinue(args);
-                }
+    if args[2] == "--write" && args.len() == 4 || args[2] == "-w" && args.len() == 4 {
+        // --writeオプションの-rオプションです
+        if args[3] == "-r" && args.len() == 5 {
+            let path = Path::new(args[1].as_str());
+            if path.exists() {
+                write::exists(path, args.clone())
             } else {
-                let path = &args[1];
-                let mut file = File::create(path).expect("Error: failed to create file.");
-                let contents = &args[3];
-                file.write_all(contents.as_bytes())
-                    .expect("Error: failed to write file");
-                println!("Successfully wrote to the file.");
+                write::filenotfound(path, args.clone());
             }
+        } else if args[3] == "-c" && args.len() == 5 {
+            write::wrcontinue(args);
         } else {
-            eprintln!("Usage: vira <filename> --write <option> <text>");
-            std::process::exit(1);
+            let path = &args[1];
+            let mut file = File::create(path).expect("Error: failed to create file.");
+            let contents = &args[3];
+            file.write_all(contents.as_bytes())
+                .expect("Error: failed to write file");
+            println!("Successfully wrote to the file.");
         }
-    } else if args.len() == 3 && args[2] == "-s" || args.len() == 3 && args[2] == "--stdin" {
+    } else if args.len() == 3 && args[2] == "-c" || args.len() == 3 && args[2] == "--continue" {
         let path = &args[1];
         match OpenOptions::new().read(true).append(true).open(path) {
             Ok(mut file) => {
@@ -150,14 +143,46 @@ fn main() {
                                 let _ = fi.write_all(content.as_bytes());
                                 println!("Backup created successfully");
                             }
-                            Err(rt) => eprintln!("Error:{}", rt),
+                            Err(rt) => {
+                                eprintln!("Error:{}", rt);
+                                std::process::exit(1);
+                            }
                         }
                     }
-                    Err(err) => eprintln!("Error: {}", err),
+                    Err(err) => {
+                        eprintln!("Error: {}", err);
+                        std::process::exit(1);
+                    }
                 }
             }
-            Err(e) => println!("Error: {}", e),
+            Err(e) => {
+                println!("Error: {}", e);
+                std::process::exit(1);
+            }
         }
+    } else if args.len() == 4 && args[2] == "-s" || args.len() == 4 && args[2] == "--serch" {
+        let mut nowline = 1;
+        let mut find = false;
+        for result in BufReader::new(File::open(&args[1]).unwrap()).lines() {
+            let line = result.unwrap();
+            if line.contains(&args[3]) {
+                println!(
+                    "{} {}: {}",
+                    "found in line".bright_green().bold(),
+                    nowline.to_string().green().bold(),
+                    line
+                );
+                find = true;
+            }
+
+            nowline += 1;
+        }
+        if find == false {
+            eprintln!("Cloud not be located.");
+            std::process::exit(1);
+        }
+    } else if args.len() == 3 && args[2] == "-s" || args.len() == 3 && args[2] == "--serch " {
+        eprintln!("Usage: vira <file> -s <find string>")
     }
     //普通のviraの処理。ほぼcatと同じ動きする。違いといえば最後に改行するぐらい
     else {
