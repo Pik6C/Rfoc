@@ -56,6 +56,7 @@ Receives characters from standard input and writes the characters successively d
 ## Applying the vira Command
 ### For Linux
 Only available for Debian-based systems.<br>
+Can be used on any OS by installing dpkg<br>
 Note that the sudo command is used.<br>
 Execute the following command<br>
 `sudo dpkg -i vira.deb`
