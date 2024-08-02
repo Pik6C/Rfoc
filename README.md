@@ -21,10 +21,11 @@ Writes the specified string to a file. By setting options, you can choose whethe
 **End of write options.**
 <br>
 
-### -s or --stdin
-  Usage: `vira <file> -s`
+### -s or --serch
+Usage: `vira <file> -s`
   <br>
-Writes the contents received from standard input into the file sequentially. The content cannot be deleted.
+Checks if a file contains a specific string.
+If so, print the number and line where that character is found.
 <br>
 
 ### -r or --remove
@@ -44,7 +45,13 @@ Usage: `vira <file> -sz`
 Displays the size of the specified file.
 
 ### -b or --backup 
+Usage: `vira <file> -b`
 Create a backup of your files.
+
+### -cw or --continuew
+Usage: `vira <file> -cw`
+<br>
+Receives characters from standard input and writes the characters successively down the file.
 
 ## Applying the vira Command
 ### For Linux
@@ -58,6 +65,8 @@ Execute the following command<br>
 > [!WARNING]
 > Please note that Windows version will not be released from v0.1.2
 
+> [!CAUTION]
+> Unlike the Linux version, the text in the Windows version is not colored.
 
 1. Open Start and click on Settings.
    - The Windows Settings window will appear.
