@@ -65,7 +65,8 @@ Execute the following command<br>
 > [!WARNING]
 > Please note that Windows version will not be released from v0.1.2
 
-> [!CAUTION]
+
+> [!IMPORTANT]
 > Unlike the Linux version, the text in the Windows version is not colored.
 
 1. Open Start and click on Settings.
