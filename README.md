@@ -1,12 +1,12 @@
-# File operation commands - Vira
+# Light file operation command - Rfoc
 
 ## Usage
 
-`vira <file> <option>`
+`rfoc <file> <option>`
 
 ## Options
 ### -w or --write
-Usage: `vira <file> --write <option> <text>`
+Usage: `rfoc <file> --write <option> <text>`
 <br>
 Writes the specified string to a file. By setting options, you can choose whether to overwrite or append to the file.
 <br>
@@ -21,34 +21,34 @@ Writes the specified string to a file. By setting options, you can choose whethe
 <br>
 
 ### -s or --serch
-Usage: `vira <file> -s`
+Usage: `rfoc <file> -s`
   <br>
 Checks if a file contains a specific string.
 If so, print the number and line where that character is found.
 <br>
 
 ### -r or --remove
-Usage: `vira <file> -r`
+Usage: `rfoc <file> -r`
 <br>
 Removes the specified file.
 <br>
 
 ### -n or --new
-Usage: `vira <file> -n`
+Usage: `rfoc <file> -n`
 <br>
 Creates a new file.
 <br>
 ### -sz or --size
-Usage: `vira <file> -sz`
+Usage: `rfoc <file> -sz`
 <br>
 Displays the size of the specified file.
 
 ### -b or --backup 
-Usage: `vira <file> -b`
+Usage: `rfoc <file> -b`
 Create a backup of your files.
 
 ### -cw or --continuew
-Usage: `vira <file> -cw`
+Usage: `rfoc <file> -cw`
 <br>
 Receives characters from standard input and writes the characters successively down the file.
 
@@ -58,7 +58,7 @@ Only available for Debian-based systems.<br>
 Can be used on any OS by installing dpkg<br>
 Note that the sudo command is used.<br>
 Execute the following command<br>
-`sudo dpkg -i vira.deb`
+`sudo dpkg -i rfoc.deb`
 ### For Windows
 
 #### For Windows 10
@@ -79,7 +79,7 @@ Execute the following command<br>
 
 Under User variables, click on **Path** and then click **Edit**.
 The Edit Environment Variable window will appear.<br>
-Click on New, enter the path where the vira command is located, and click OK.<br>
+Click on New, enter the path where the rfoc command is located, and click OK.<br>
 Return to the Environment Variables window.<br>
 <br>
 
@@ -91,5 +91,5 @@ Return to the Environment Variables window.<br>
 3. Click on the Environment Variables button at the bottom right of the Advanced tab.
    - Open the Environment Variables window.
 
-Click New, enter the path where the vira command is located, and click OK.<br>
+Click New, enter the path where the rfoc command is located, and click OK.<br>
 Return to the Environment Variables window.<br>
